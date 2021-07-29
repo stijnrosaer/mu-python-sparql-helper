@@ -1,6 +1,6 @@
 # SPARQL helper
 
-This package contains helper functions for SPARQL queries and is made for the [mu.semte.ch](mu.semte.ch) microservice
+This package contains helper functions for SPARQL queries and is made for the [mu.semte.ch](https://mu.semte.ch) microservice
 stack.
 
 Package derived from the [mu-python template](https://github.com/mu-semtech/mu-python-template) helper functions.
