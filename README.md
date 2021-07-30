@@ -16,7 +16,7 @@ The template provides the user with several helper methods. They aim to give you
 The below helpers can be imported from the `helpers` module. For example:
 
 ```py
-from sparql_helpers.helpers import *
+from mu_sparql_helpers.helpers import *
 ```
 
 Available functions:
@@ -67,7 +67,7 @@ The template provides one other helper module, being the `escape_helpers`-module
 query-escaping. Example import:
 
 ```py
-from sparql_helpers.escape_helpers import *
+from mu_sparql_helpers.escape_helpers import *
 ```
 
 Available functions:
