@@ -38,8 +38,7 @@ def generate_uuid():
 
 def log(msg, *args, **kwargs):
     """
-    write a log message to the log file. Logs are written to the `/logs`
-     directory in the docker container.
+    write a log message to the log file. Logs are written to the `/logs` directory in the docker container.
     :param msg: log message
     :param args: args
     :param kwargs: kwargs
@@ -50,7 +49,8 @@ def log(msg, *args, **kwargs):
 
 def session_id_header(request):
     """
-    returns the MU-SESSION-ID header from the given request
+    Returns the MU-SESSION-ID header from the given request.
+    Only valid when called after receiving a flask request.
     :param request: flask http request
     :return: string:request MU-SESSION-ID header
     """
@@ -59,7 +59,8 @@ def session_id_header(request):
 
 def rewrite_url_header(request):
     """
-    return the X-REWRITE-URL header from the given request
+    Return the X-REWRITE-URL header from the given request.
+    Only valid when called after receiving a flask request.
     :param request: flask http request
     :return: string:request X-REWRITE-URL header
     """
@@ -68,8 +69,7 @@ def rewrite_url_header(request):
 
 def error(msg, status=400, **kwargs):
     """
-    Returns a Response object containing a JSONAPI compliant error response
-    with the given status code (400 by default).
+    Returns a Response object containing a JSONAPI compliant error response with the given status code (400 by default).
     :param msg: error message
     :param status: status number
     :param kwargs: kwargs
@@ -89,6 +89,7 @@ def error(msg, status=400, **kwargs):
 def validate_json_api_content_type(request):
     """
     Validate whether the content type of the request is application/vnd.api+json.
+    Only valid when called after receiving a flask request.
     :param request: flask http request
     :return
     """
@@ -167,9 +168,8 @@ def update(the_query):
 def update_modified(subject, modified=datetime.datetime.now()):
     """
     Executes a SPARQL query to update the modification date of the given subject URI (string).
-     The default date is now.
     :param subject: subject of triple
-    :param modified: modification timee
+    :param modified: modification time
     :return: json:update query response
     """
     query = " WITH <%s> " % MU_APPLICATION_GRAPH
