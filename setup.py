@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="mu-sparql-helpers",
-    version="0.1.0",
+    version="0.1.1",
     author="Stijn Rosaer",
     author_email="stijn.rosaer@telenet.be",
     description="SPARQL helper functions for a mu.semte.ch stack",
